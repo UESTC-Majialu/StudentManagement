@@ -31,7 +31,7 @@ app.post('/add', (req, res) => {
   const { student_id, name, age, gender, chinese, math, english } = req.body
   // 构建一个对象，包含学生信息
   const studentData = {
-    create_time: new Date().toString().replace('T', ' ').substring(0, 19),
+    create_time: new Date().toISOString().replace('T', ' ').substring(0, 19),
     student_id,
     name,
     age,
@@ -61,7 +61,7 @@ app.put('/edit', (req, res) => {
   const { id, student_id, name, age, gender, chinese, math, english } = req.body
   //构建一个对象，包含学生信息
   const studentData = {
-    create_time: new Date().toString().replace('T', ' ').substring(0, 19),
+    create_time: new Date().toISOString().replace('T', ' ').substring(0, 19),
     student_id,
     name,
     age,
